@@ -31,6 +31,7 @@ exclude_patterns = ['parameters']
 html_theme = 'sphinx_book_theme'
 html_theme_options = {
     "show_toc_level": 3,
-    "collapse_navigation": False,
+    "show_navbar_depth": 3,
+    "collapse_navbar": False,
 }
 ## html_static_path = ['_static']
