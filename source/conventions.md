@@ -33,7 +33,7 @@ The root of the PALS schema is given by this dictionary:
 PALS:
   version: null  # version schema: defined later
 
-  lattices:
+  facility:
     - ...  # a list of lattice elements and commands
 ```
 
@@ -100,7 +100,7 @@ Example:
 PALS:
   # ...
 
-  lattices:
+  facility:
     # the elements and commands of base-lattice.pals.yaml
     - include: "./base-lattice.pals.yaml"
 
