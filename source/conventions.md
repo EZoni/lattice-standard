@@ -234,8 +234,8 @@ Marker::.* & Q1:Q2
 ```
 This will match to all `Marker` elements that are in the range from `Q1` to `Q2`.
 
-Order of presedence:
-```{code} text
+Order of precedence:
+```{code} yaml
 >>>     # Highest
 >>
 ::      
