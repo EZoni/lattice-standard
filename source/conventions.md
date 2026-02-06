@@ -181,7 +181,7 @@ could, for example, be a linked list).
 
 If there are multiple [`Lattice`](#s:lattice.construct) constructs, the element name may be qualified using the lattice
 name with `">>>"` as a separator. There are several permutations where `>>` and `>>>` are used:
-```{code} yaml
+```{code} text
 {lattice-name}>>>{branch-name}>>{element-name}
 {lattice-name}>>>{element-name}
 {branch-name}>>{element-name}
@@ -213,7 +213,7 @@ For example, if `Q2` comes before `Q1` in the above example, the range matches a
 `Q1` to the end of the line plus all elements from the beginning of the line to `Q2`.
 
 Commas `,` can be used to form the union of element sets. The syntax is
-```{code} yaml
+```{code} text
 {element-set1}, {element-set2}, ... , {element-setN}
 ```
 where `{element-set1}`, ... `{element-setN}` are element sets. 
@@ -224,7 +224,7 @@ A, B, Q.*
 This will match to all elements named `A`, `B`, and all elements whose name begins with `Q`.
 
 Ampersands `&` can be used to form the intersection of element sets. The syntax is
-```{code} yaml
+```{code} text
 {element-set1} & {element-set2} & ... & {element-setN}
 ```
 where `{element-set1}`, ... `{element-setN} are element sets. 
@@ -235,7 +235,7 @@ Marker::.* & Q1:Q2
 This will match to all `Marker` elements that are in the range from `Q1` to `Q2`.
 
 Order of presedence:
-```{code} yaml
+```{code} text
 >>>     # Highest
 >>
 ::      
@@ -250,7 +250,7 @@ Order of presedence:
 ## Element Parameter Name Matching
 
 For element parameters, the general syntax is
-```{code} yaml
+```{code} text
 {beamline}>>{element}>{parameter-group}.{sub-group1}. ... .{sub-groupN}.{parameter}
 ```
 where
