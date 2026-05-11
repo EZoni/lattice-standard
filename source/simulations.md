@@ -1,7 +1,7 @@
 (c:impl.sims)=
 # Simulations
 
-The Particle Accelerator Lattice Standard (PALS) will be used used in various accelerator lattice simulations.
+PALS will be used in various accelerator lattice simulations.
 
 ## Planned Implementations
 
