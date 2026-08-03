@@ -162,13 +162,19 @@ The length of this element is considered to be zero so if `length` is specified,
 (s:beginningele)=
 ### BeginningEle Element
 
-A BeginningEle element is an initial element at the start of a branch.
-Under Construction...
+A `BeginningEle` element is used as the initial element at the start of a branch
+and holds initial values for floor coordinates, reference parameters, etc.
+If the beginning element (first element in the line)
+is the destination element for some `Fork` element, and if this `Fork` element
+has `ForkP.propagate_reference` set to true, it is optional that the first
+element in the branch is a `BeginningEle` element. For all other branches,
+the beginning element must be a `BeginningEle`.
 
 Element parameter groups associated with this element kind are:
 - [**ApertureP**](#s:aperture.params): Aperture parameters.
 - [**BodyShiftP**](#s:bodyshift.params): Orientation of element with respect to its nominal position.
 - [**FloorP**](#s:floor.params): Floor position and orientation.
+- [**ForkFromP**](#s:fork.from.params): List of `Fork` elements forking to this element.
 - [**MetaP**](#s:meta.params): Meta parameters.
 - [**ParticleP**](#s:particle.params): Particle coordinates.
 - [**ReferenceP**](#s:ref.params): **Output Parameters.** Reference parameters.
@@ -386,6 +392,7 @@ Element parameter groups associated with this element kind are:
 - [**ApertureP**](#s:aperture.params): Aperture parameters.
 - [**BodyShiftP**](#s:bodyshift.params): Orientation of element with respect to its nominal position.
 - [**FloorP**](#s:floor.params): Floor position and orientation.
+- [**ForkFromP**](#s:fork.from.params): List of `Fork` elements forking to this element.
 - [**ForkP**](#s:fork.params): Required. Fork element parameters.
 - [**MetaP**](#s:meta.params): Meta parameters.
 - [**ParticleP**](#s:particle.params): **Output Parameters.** Particle coordinates.
@@ -466,6 +473,7 @@ Element parameter groups associated with this element kind are:
 - [**ApertureP**](#s:aperture.params): Aperture parameters.
 - [**BodyShiftP**](#s:bodyshift.params): Orientation of element with respect to its nominal position.
 - [**FloorP**](#s:floor.params): Floor position and orientation.
+- [**ForkFromP**](#s:fork.from.params): List of `Fork` elements forking to this element.
 - [**MetaP**](#s:meta.params): Meta parameters.
 - [**ParticleP**](#s:particle.params): **Output Parameters.** Particle coordinates.
 - [**ReferenceP**](#s:ref.params): **Output Parameters.** Reference parameters.
