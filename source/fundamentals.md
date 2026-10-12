@@ -6,19 +6,20 @@
 ## PALS Root Object
 
 The root of the PALS schema is given by a `PALS` node. Possible subnodes are:
-```{code} YAML
+```{code} yaml
 PALS:
-  authors:                  # [list] Authors associated with this file
+  adjustments:              # [list] Lattice parameter adjustments after lattice expansion.
+  authors:                  # [list] Authors associated with this file.
   extension_labels:         # [Dict] Optional extensions to PALS that the standard shall ignore.
   facility:                 # [list] lattice elements, beamlines, lattices, parameter set commands, etc.
   girders:                  # [Dict] Girder elements.
   include:                  # [string] Optional literal insert of a file
   load:                     # [list] Files to load. See the "Load Files" section.
   notes:                    # [list] Optional notes of interest.
-  phase_space_coordinates:  # [enum] Type of phase space coordinates 
+  phase_space_coordinates:  # [enum] Type of phase space coordinates.
   post_expansion:           # [list] Optional post-expansion setup. 
   reminders:                # [list] Optional reminder messages to be printed when file is read.
-  version:                  # [string] Version of the PALS schema used in this file
+  version:                  # [string] Version of the PALS schema used in this file.
 ```
 The `girders` node is documented with the [`Girders` element](#s:girder) documentation.
 
@@ -26,7 +27,7 @@ The difference between `notes` and `reminders` is that reminder messages are mea
 printed (or otherwise communicated to the user) every time the file is read.
 
 Example:
-```{code} YAML
+```{code} yaml
 PALS:
   version: null  # version schema: defined later
 
@@ -123,7 +124,7 @@ A PALS file can rely on includes from other files using the `include` command.
 Included file data will be included verbatim at the current level of nesting.
 
 Example:
-```{code} YAML
+```{code} yaml
 PALS:
   include: "version-and-globals.subpals.yaml"
 
@@ -140,11 +141,11 @@ PALS:
 ```
 The information in an included file is inserted at the `include` point. In this example,
 the included file `version-and-globals.subpals.yaml` could look like, for example:
-```{code} YAML
+```{code} yaml
 version: null  # version schema: defined later
 ```
 and the file `include-Q-params.subpals.yaml` could look like:
-```{code} YAML
+```{code} yaml
 MagneticMultipoleP:
   Kn3L: 0.3
 ```
